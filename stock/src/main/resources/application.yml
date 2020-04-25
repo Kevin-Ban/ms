@@ -19,3 +19,19 @@ spring:
       max-idle: 10
       min-idle: 0
     timeout: 1000
+
+
+rocketmq:
+  topic: test
+  tag: stock
+  producer:
+    groupName: ${spring.application.name}
+    namesrvAddr: localhost:9876
+    maxMessageSize: 4096
+    instanceName: testInstanceName
+    sendMsgTimeout: 6000
+  consumer:
+    groupName: ${spring.application.name}
+    namesrvAddr: ${rocketmq.producer.namesrvAddr}
+    instanceName: ${rocketmq.producer.instanceName}
+
