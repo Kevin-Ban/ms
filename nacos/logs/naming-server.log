@@ -1,0 +1,68 @@
+2020-04-25 15:51:28,928 INFO listen for service meta change
+
+2020-04-25 15:51:46,895 INFO [SERVER-INIT] got port: 8848
+
+2020-04-25 15:51:46,895 INFO [SERVER-INIT] got path: /nacos
+
+2020-04-25 15:51:48,480 INFO receive config info: unknown#192.168.0.106:8848#1587801108480#4
+
+
+2020-04-25 15:52:03,481 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.0.106","key":"192.168.0.106:8848","lastRefTime":1587801108480,"lastRefTimeStr":"2020-04-25 15:51:48","servePort":8848,"site":"unknown","weight":4}]
+
+2020-04-25 15:52:03,485 INFO receive config info: unknown#192.168.0.106:8848#1587801123481#4
+
+
+2020-04-25 17:52:46,410 INFO listen for service meta change
+
+2020-04-25 17:52:53,885 INFO [SERVER-INIT] got port: 8848
+
+2020-04-25 17:52:53,885 INFO [SERVER-INIT] got path: /nacos
+
+2020-04-25 17:53:06,251 INFO receive config info: unknown#192.168.0.106:8848#1587808386251#4
+
+
+2020-04-25 17:53:21,253 INFO [NACOS-DISTRO] healthy server list changed, disable health check for 60000 ms from now on, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.0.106","key":"192.168.0.106:8848","lastRefTime":1587808386251,"lastRefTimeStr":"2020-04-25 17:53:06","servePort":8848,"site":"unknown","weight":4}]
+
+2020-04-25 17:53:21,253 INFO receive config info: unknown#192.168.0.106:8848#1587808401253#4
+
+
+2020-04-25 17:53:36,255 INFO receive config info: unknown#192.168.0.106:8848#1587808416255#4
+
+
+2020-04-25 17:53:51,256 INFO receive config info: unknown#192.168.0.106:8848#1587808431256#4
+
+
+2020-04-25 17:54:06,258 INFO receive config info: unknown#192.168.0.106:8848#1587808446258#4
+
+
+2020-04-25 17:54:10,713 INFO creating empty service public:DEFAULT_GROUP@@stock
+
+2020-04-25 17:54:10,729 INFO [NEW-SERVICE] {"appName":"","checksum":"d9c3a176ebf6990822babe070768ef9","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1587808450716,"metadata":{},"name":"DEFAULT_GROUP@@stock","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
+
+2020-04-25 17:54:10,750 WARN cluster: DEFAULT not found, ip: {"app":"unknown","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.0.106#2000#DEFAULT#DEFAULT_GROUP@@stock","ip":"192.168.0.106","ipDeleteTimeout":30000,"lastBeat":1587808450708,"marked":false,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":2000,"serviceName":"DEFAULT_GROUP@@stock","tenant":"","weight":1.0}, will create new cluster with default configuration.
+
+2020-04-25 17:54:10,755 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@stock, value: {"cachedChecksum":"","instanceList":[{"app":"unknown","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.0.106#2000#DEFAULT#DEFAULT_GROUP@@stock","ip":"192.168.0.106","ipDeleteTimeout":30000,"lastBeat":1587808450708,"marked":false,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":2000,"serviceName":"DEFAULT_GROUP@@stock","tenant":"","weight":1.0}]}
+
+2020-04-25 17:54:21,259 INFO [NACOS-DISTRO] distro threshold restored and stable now, enable health check. current ratio: 1.0
+
+2020-04-25 17:54:21,259 INFO receive config info: unknown#192.168.0.106:8848#1587808461259#4
+
+
+2020-04-25 17:54:36,261 INFO receive config info: unknown#192.168.0.106:8848#1587808476261#4
+
+
+2020-04-25 17:54:51,263 INFO receive config info: unknown#192.168.0.106:8848#1587808491263#4
+
+
+2020-04-25 17:55:06,265 INFO receive config info: unknown#192.168.0.106:8848#1587808506265#4
+
+
+2020-04-25 17:55:21,267 INFO receive config info: unknown#192.168.0.106:8848#1587808521267#4
+
+
+2020-04-25 17:55:36,269 INFO receive config info: unknown#192.168.0.106:8848#1587808536269#4
+
+
+2020-04-25 17:55:51,271 INFO receive config info: unknown#192.168.0.106:8848#1587808551271#4
+
+

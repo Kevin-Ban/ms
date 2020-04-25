@@ -1,0 +1,4 @@
+2020-04-25 17:54:10,760 INFO DEFAULT_GROUP@@stock {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.106:2000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-25 17:54:10,762 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@stock, ips: 192.168.0.106:2000_true,
+
