@@ -1,0 +1,42 @@
+server:
+  port: 2001
+
+spring:
+  application:
+    name: order
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ms?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 1000
+    jedis:
+      pool:
+        max-idle: 200
+        max-wait: 1
+        min-idle: 0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
+
+
+rocketmq:
+  topic: test
+  tag: stock
+  producer:
+    groupName: ${spring.application.name}
+    namesrvAddr: localhost:9876
+    maxMessageSize: 4096
+    instanceName: testInstanceName
+    sendMsgTimeout: 6000
+  consumer:
+    groupName: ${spring.application.name}
+    namesrvAddr: ${rocketmq.producer.namesrvAddr}
+    instanceName: ${rocketmq.producer.instanceName}
+
