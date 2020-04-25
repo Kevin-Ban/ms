@@ -1,1 +1,25 @@
 # Created by .ignore support plugin (hsz.mobi)
+/nacos/logs/
+.gitignore
+.mvn/
+mvnw
+mvnw.cmd
+.idea/
+nacos/bin/logs/
+nacos/bin/work/
+nacos/data/derby-data/seg0/d770.dat
+nacos/data/derby-data/seg0/d780.dat
+nacos/data/derby-data/seg0/d790.dat
+nacos/data/derby-data/seg0/d7a0.dat
+nacos/data/derby-data/seg0/d7b0.dat
+nacos/data/derby-data/seg0/d7c0.dat
+nacos/data/derby-data/seg0/d7d0.dat
+nacos/data/derby-data/seg0/d7e0.dat
+nacos/data/derby-data/seg0/d7f0.dat
+nacos/data/derby-data/seg0/d800.dat
+nacos/data/derby-data/seg0/d810.dat
+nacos/data/derby-data/seg0/d820.dat
+nacos/data/derby-data/seg0/d830.dat
+nacos/data/derby-data/seg0/d840.dat
+nacos/data/derby-data/tmp/
+nacos/data/naming/data/
