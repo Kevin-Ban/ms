@@ -19,6 +19,7 @@ spring:
           uri: lb://order
           predicates:
             - Path=/order/**
+      # 开启网关转发，不设置该属性会转发失败，报404
       discovery:
         locator:
           enabled: true
