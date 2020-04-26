@@ -20,6 +20,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
+//import org.redisson.RedissonLock;
+//import org.redisson.api.RLock;
+//import org.redisson.api.RedissonClient;
+
 @RestController
 @Slf4j
 public class TestController {
@@ -28,6 +32,8 @@ public class TestController {
     private StockService stockService;
     @Autowired
     private DefaultMQProducer producer;
+//    @Autowired
+//    private RedissonClient redissonClient;
 
     @GetMapping("/test")
     public Map<String, Object> test() {
@@ -43,9 +49,12 @@ public class TestController {
         Message msg = new Message("test", "测试测试", param.toString().getBytes(RemotingHelper.DEFAULT_CHARSET));
         producer.send(msg);
 //        param.put("isSuccess", true);
+//        RLock lock = redissonClient.getLock("test_lock");
+//        lock.lock();
         Map<String, Object> result = new HashMap<>(16);
         result.put("isSuccess", true);
         result.put("param", param);
+//        lock.unlock();
         return result;
     }
 }
