@@ -4,8 +4,21 @@ server:
 spring:
   application:
     name: gateway
-
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+        enabled: true
+    gateway:
+      routes:
+        - id: stock
+          uri: lb://stock
+          predicates:
+            - Path=/stock/**
+        - id: order
+          uri: lb://order
+          predicates:
+            - Path=/order/**
+      discovery:
+        locator:
+          enabled: true
