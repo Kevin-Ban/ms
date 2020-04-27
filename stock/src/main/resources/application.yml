@@ -17,8 +17,8 @@ spring:
     jedis:
       pool:
         max-idle: 200
-        max-wait: 1
-        min-idle: 0
+        max-wait: 10000
+        min-idle: 10
   cloud:
     nacos:
         discovery:
