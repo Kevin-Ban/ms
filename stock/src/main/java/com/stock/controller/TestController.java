@@ -38,7 +38,7 @@ public class TestController {
     public Map<String, Object> test() {
         Map<String, Object> result = new HashMap<>(16);
         result.put("test", "success");
-        result.put("list", stockService.list());
+        result.put("list", stockService.listAll());
         log.info("result:" + result.toString());
         return result;
     }
