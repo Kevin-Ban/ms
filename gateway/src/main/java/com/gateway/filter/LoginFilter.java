@@ -1,6 +1,7 @@
 package com.gateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
+import com.gateway.bean.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -42,12 +43,8 @@ public class LoginFilter implements GlobalFilter, Ordered {
             }
         }
         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-        JSONObject message = new JSONObject();
-        message.put("success", false);
-        message.put("code", HttpStatus.UNAUTHORIZED);
-        message.put("message", "用户未登录");
-        message.put("timestamp", System.currentTimeMillis());
-        byte[] bits = message.toJSONString().getBytes(StandardCharsets.UTF_8);
+        Result result = Result.fail("用户未登录");
+        byte[] bits = JSONObject.toJSONString(result).getBytes(StandardCharsets.UTF_8);
         ServerHttpResponse response = exchange.getResponse();
         DataBuffer buffer = response.bufferFactory().wrap(bits);
         response.getHeaders().add("Content-Type", "text/json;charset=UTF-8");
