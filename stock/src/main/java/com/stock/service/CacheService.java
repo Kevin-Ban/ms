@@ -2,6 +2,7 @@ package com.stock.service;
 
 import com.stock.bean.Stock;
 import com.stock.util.Global;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -11,8 +12,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
+@Slf4j
 public class CacheService {
 
     @Autowired
@@ -29,10 +32,14 @@ public class CacheService {
      * 刷新库存
      */
     public void refreshStock() {
+        log.info("刷新redis和内存地址缓存：开始");
         List<Stock> list = stockService.listAll();
+        ConcurrentHashMap<String, Boolean> stockMap = MemoryCacheStock.getInstance();
         for (Stock item : list) {
+            stockMap.put(item.getCode(), item.getTotal() > 0);
             redisTemplate.opsForValue().set(Global.STOCK_CACHE + item.getCode(), item);
         }
+        log.info("刷新redis和内存地址缓存：完成");
     }
 
     public List<Stock> listStock() {

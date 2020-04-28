@@ -3,6 +3,7 @@ package com.stock.controller;
 import com.stock.bean.Stock;
 import com.stock.bean.result.Result;
 import com.stock.service.CacheService;
+import com.stock.service.MemoryCacheStock;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class CacheManageController {
     @PostMapping("/refreshStock")
     public Result refreshStock() {
         cacheService.refreshStock();
-        return Result.success();
+        return Result.success(MemoryCacheStock.getInstance());
     }
 
     @ApiOperation("获取库存的缓存数据")
