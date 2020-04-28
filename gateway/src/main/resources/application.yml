@@ -23,3 +23,13 @@ spring:
       discovery:
         locator:
           enabled: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 1000
+    jedis:
+      pool:
+        max-idle: 200
+        max-wait: 1
+        min-idle: 0
