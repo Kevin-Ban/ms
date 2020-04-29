@@ -1,8 +1,8 @@
 package com.gateway.filter;
 
+import bean.result.Result;
+import bean.result.ResultMsg;
 import com.alibaba.fastjson.JSONObject;
-import com.gateway.bean.result.Result;
-import com.gateway.bean.result.ResultMsg;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;

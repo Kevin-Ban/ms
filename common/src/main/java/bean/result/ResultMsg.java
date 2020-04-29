@@ -1,4 +1,4 @@
-package com.gateway.bean.result;
+package bean.result;
 
 public class ResultMsg {
 

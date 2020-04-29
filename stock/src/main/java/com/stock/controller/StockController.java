@@ -1,7 +1,7 @@
 package com.stock.controller;
 
-import com.stock.bean.result.Result;
-import com.stock.bean.result.ResultMsg;
+import bean.result.Result;
+import bean.result.ResultMsg;
 import com.stock.service.MemoryCacheStock;
 import com.stock.service.StockService;
 import com.stock.util.Global;

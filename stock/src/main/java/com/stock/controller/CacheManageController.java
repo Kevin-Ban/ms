@@ -1,7 +1,7 @@
 package com.stock.controller;
 
+import bean.result.Result;
 import com.stock.bean.Stock;
-import com.stock.bean.result.Result;
 import com.stock.service.CacheService;
 import com.stock.service.MemoryCacheStock;
 import io.swagger.annotations.Api;

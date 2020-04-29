@@ -1,7 +1,7 @@
 package com.gateway.filter;
 
+import bean.result.Result;
 import com.alibaba.fastjson.JSONObject;
-import com.gateway.bean.result.Result;
 import com.google.common.util.concurrent.RateLimiter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
