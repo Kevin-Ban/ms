@@ -1,4 +1,110 @@
-2020-04-25 17:54:10,760 INFO DEFAULT_GROUP@@stock {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.106:2000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2020-04-29 09:31:21,834 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2020-04-25 17:54:10,762 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@stock, ips: 192.168.0.106:2000_true,
+2020-04-29 09:31:21,841 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 09:37:44,309 INFO DEFAULT_GROUP@@order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:37:44,310 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@order, ips: 192.168.72.76:3001_true,
+
+2020-04-29 09:51:29,734 INFO DEFAULT_GROUP@@order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:51:29,734 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@order, ips: 
+
+2020-04-29 09:51:35,774 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:51:35,774 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 09:52:08,102 INFO DEFAULT_GROUP@@order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:52:08,102 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@order, ips: 192.168.72.76:3001_true,
+
+2020-04-29 09:52:17,434 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:52:17,434 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 09:53:56,526 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:53:56,526 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 09:54:36,827 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 09:54:36,827 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 10:01:16,858 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:01:16,858 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 10:01:53,603 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:01:53,603 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 10:07:40,372 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:07:40,372 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 10:08:20,977 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:08:20,977 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 10:19:11,458 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:19:11,458 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 10:19:59,258 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:19:59,258 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 10:20:32,231 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:20:32,231 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 10:21:09,660 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:21:09,660 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 10:49:49,245 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:49:49,245 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 10:53:57,246 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 10:53:57,246 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 11:04:55,830 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 11:04:55,830 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 11:05:35,770 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 11:05:35,770 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 11:06:12,793 INFO {POS} {IP-DISABLED} valid: 192.168.72.76:3010@DEFAULT@DEFAULT_GROUP@@gateway, region: unknown, msg: client timeout after 15000, last beat: 1588129555786
+
+2020-04-29 11:06:27,998 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-04-29 11:06:27,998 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 11:06:33,640 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 11:06:33,640 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 11:08:15,242 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 11:08:15,242 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-04-29 11:08:57,014 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:3010:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 11:08:57,014 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.72.76:3010_true,
+
+2020-04-29 11:43:10,488 INFO DEFAULT_GROUP@@biz {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.72.76:16030:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-04-29 11:43:10,488 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@biz, ips: 192.168.72.76:16030_true,
+
+2020-04-29 11:58:30,661 INFO {POS} {IP-DISABLED} valid: 192.168.72.76:16030@DEFAULT@DEFAULT_GROUP@@biz, region: unknown, msg: client timeout after 15000, last beat: 1588132695185
+
+2020-04-29 11:58:44,218 INFO service: DEFAULT_GROUP@@biz {POS} {IP-ENABLED} valid: 192.168.72.76:16030@DEFAULT, region: unknown, msg: client beat ok
+
+2020-04-29 11:59:10,667 INFO {POS} {IP-DISABLED} valid: 192.168.72.76:16030@DEFAULT@DEFAULT_GROUP@@biz, region: unknown, msg: client timeout after 15000, last beat: 1588132734219
+
+2020-04-29 11:59:12,735 INFO service: DEFAULT_GROUP@@biz {POS} {IP-ENABLED} valid: 192.168.72.76:16030@DEFAULT, region: unknown, msg: client beat ok
 

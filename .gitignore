@@ -23,3 +23,6 @@ nacos/data/derby-data/seg0/d830.dat
 nacos/data/derby-data/seg0/d840.dat
 nacos/data/derby-data/tmp/
 nacos/data/naming/data/
+!/nacos/bin/derby.log
+/nacos/logs/
+/nacos/data/derby-data/

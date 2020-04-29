@@ -1,2 +1,72 @@
-2020-04-25 17:54:11,765 INFO DEFAULT_GROUP@@stock is changed, add it to push queue.
+2020-04-29 09:31:22,844 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 09:37:45,311 INFO DEFAULT_GROUP@@order is changed, add it to push queue.
+
+2020-04-29 09:51:30,736 INFO DEFAULT_GROUP@@order is changed, add it to push queue.
+
+2020-04-29 09:51:36,776 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 09:52:09,103 INFO DEFAULT_GROUP@@order is changed, add it to push queue.
+
+2020-04-29 09:52:18,435 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 09:53:57,528 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 09:54:37,829 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:01:17,860 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:01:54,605 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:07:41,374 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:08:21,978 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:19:12,460 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:20:00,260 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:20:33,232 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:21:10,661 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:49:50,246 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 10:53:58,248 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:04:56,832 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:05:36,770 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:06:13,794 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:06:29,000 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:06:34,642 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:08:16,244 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:08:58,015 INFO DEFAULT_GROUP@@gateway is changed, add it to push queue.
+
+2020-04-29 11:43:11,489 INFO DEFAULT_GROUP@@biz is changed, add it to push queue.
+
+2020-04-29 11:58:31,662 INFO DEFAULT_GROUP@@biz is changed, add it to push queue.
+
+2020-04-29 11:58:45,219 INFO DEFAULT_GROUP@@biz is changed, add it to push queue.
+
+2020-04-29 11:58:45,220 INFO serviceName: DEFAULT_GROUP@@biz changed, schedule push for: 192.168.198.1:52808, agent: Nacos-Java-Client:v1.0.0, key: 192.168.198.1,52808,11144316090700
+
+2020-04-29 11:58:45,220 INFO send udp packet: 192.168.198.1,52808,11144316090700
+
+2020-04-29 11:58:45,240 INFO received ack: {"type": "push-ack", "lastRefTime":"11144316090700", "data":""} from: 192.168.198.1:, cost: 52808 ms, unacked: 20, total push: 0
+
+2020-04-29 11:59:11,667 INFO DEFAULT_GROUP@@biz is changed, add it to push queue.
+
+2020-04-29 11:59:13,737 INFO DEFAULT_GROUP@@biz is changed, add it to push queue.
+
+2020-04-29 11:59:13,737 INFO serviceName: DEFAULT_GROUP@@biz changed, schedule push for: 192.168.198.1:52808, agent: Nacos-Java-Client:v1.0.0, key: 192.168.198.1,52808,11172834369400
+
+2020-04-29 11:59:13,737 INFO send udp packet: 192.168.198.1,52808,11172834369400
+
+2020-04-29 11:59:13,739 INFO received ack: {"type": "push-ack", "lastRefTime":"11172834369400", "data":""} from: 192.168.198.1:, cost: 52808 ms, unacked: 2, total push: 0
 
