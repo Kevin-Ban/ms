@@ -2,6 +2,8 @@ package com.gateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gateway.bean.result.Result;
+import com.gateway.bean.result.ResultMsg;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -21,6 +23,7 @@ import java.util.List;
 /**
  * 登陆过滤器，用户未登录，则直接返回
  */
+@Slf4j
 public class LoginFilter implements GlobalFilter, Ordered {
 
     @Autowired
@@ -28,7 +31,7 @@ public class LoginFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-
+        log.info("requestId:" + exchange.getRequest().getId());
         // 在header中检查用户是否已登陆
         HttpHeaders headers = exchange.getRequest().getHeaders();
         if (!CollectionUtils.isEmpty(headers)) {
@@ -43,7 +46,7 @@ public class LoginFilter implements GlobalFilter, Ordered {
             }
         }
         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-        Result result = Result.fail("用户未登录");
+        Result result = Result.fail(ResultMsg.USER_NOT_LOGIN);
         byte[] bits = JSONObject.toJSONString(result).getBytes(StandardCharsets.UTF_8);
         ServerHttpResponse response = exchange.getResponse();
         DataBuffer buffer = response.bufferFactory().wrap(bits);
