@@ -1,4 +1,4 @@
-package com.stock.util;
+package util;
 
 public class Global {
 

@@ -16,4 +16,8 @@ public class StockService {
     public List<Stock> listAll() {
         return stockMapper.query();
     }
+
+    public int decreaseStock(String code) {
+        return stockMapper.decreaseStock(code);
+    }
 }

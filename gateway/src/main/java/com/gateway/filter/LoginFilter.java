@@ -31,7 +31,7 @@ public class LoginFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("requestId:" + exchange.getRequest().getId());
+//        log.info("requestId:" + exchange.getRequest().getId());
         // 在header中检查用户是否已登陆
         HttpHeaders headers = exchange.getRequest().getHeaders();
         if (!CollectionUtils.isEmpty(headers)) {

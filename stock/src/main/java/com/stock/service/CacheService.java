@@ -1,12 +1,12 @@
 package com.stock.service;
 
 import com.stock.bean.Stock;
-import com.stock.util.Global;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import util.Global;
 
 import java.util.ArrayList;
 import java.util.Collections;

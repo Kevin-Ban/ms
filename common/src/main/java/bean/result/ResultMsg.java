@@ -7,4 +7,6 @@ public class ResultMsg {
     public static String GOOD_NOT_ENOUGH = "商品库存不足";
 
     public static String USER_NOT_LOGIN = "用户未登录";
+
+    public static String SYSTEM_ERROR = "系统异常";
 }
