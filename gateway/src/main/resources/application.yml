@@ -19,12 +19,12 @@ spring:
           uri: lb://order
           predicates:
             - Path=/order/**
-          filters:
-            - name: RequestRateLimiter
-              args:
-                key-resolver: '#{@myKeyResolver}'
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 2
+      #          filters:
+      #            - name: RequestRateLimiter
+      #              args:
+      #                key-resolver: '#{@myKeyResolver}'
+      #                redis-rate-limiter.replenishRate: 1
+      #                redis-rate-limiter.burstCapacity: 2
       # 开启网关转发，不设置该属性会转发失败，报404
       discovery:
         locator:

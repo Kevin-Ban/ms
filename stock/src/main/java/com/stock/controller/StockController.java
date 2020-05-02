@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import util.Global;
+import util.SnowFlake;
 
 @RestController
 @Slf4j
-@Api("内存地址标志管理")
+@Api("库存管理")
 public class StockController {
 
     @Autowired
@@ -55,6 +56,14 @@ public class StockController {
             return Result.fail(ResultMsg.SYSTEM_ERROR);
         }
         OrderMessage orderMessage = new OrderMessage();
+        orderMessage.setOrderId(SnowFlake.nextId());
+        orderMessage.setStockCode(code);
+        // region 此处应该填入用户信息，或者至少应该填入token的信息，让检索用户的操作延后到订单服务
+        orderMessage.setUser(null);
+        // endregion
+        // region 发送RocketMq消息
+
+        // endregion
         return null;
     }
 
