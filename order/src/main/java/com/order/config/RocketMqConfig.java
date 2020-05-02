@@ -1,19 +1,15 @@
 package com.order.config;
 
-import com.alibaba.fastjson.JSONException;
+import com.order.service.OrderMqListener;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
-import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
-import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
-import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.nio.charset.StandardCharsets;
+import util.Global;
 
 @Configuration
 @Slf4j
@@ -50,21 +46,8 @@ public class RocketMqConfig {
         //消费模式，集群消费
         consumer.setMessageModel(MessageModel.CLUSTERING);
         try {
-//            consumer.subscribe(this.topic, tag);
-            consumer.subscribe("test", "*");
-            consumer.registerMessageListener((MessageListenerConcurrently) (msgList, consumeConcurrentlyContext) -> {
-                try {
-                    MessageExt msg = null;
-                    for (MessageExt aMsgList : msgList) {
-                        msg = aMsgList;
-                        log.info("收到MQ消息：" + new String(aMsgList.getBody(), StandardCharsets.UTF_8));
-                    }
-                } catch (JSONException e) {
-                    log.error("", e);
-                    return ConsumeConcurrentlyStatus.RECONSUME_LATER;
-                }
-                return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
-            });
+            consumer.subscribe(Global.MQ_ORDER_TOPIC, Global.MQ_ORDER_TAG);
+            consumer.registerMessageListener(new OrderMqListener());
             consumer.start();
             log.info("已启动Consumer【group:" + this.groupName + "，instance:" + this.instanceName
                     + "】，监听TOPIC-{" + this.topic + "},tag-{" + this.tag + "}");

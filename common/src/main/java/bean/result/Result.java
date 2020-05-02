@@ -21,10 +21,10 @@ public class Result<T> {
         return result;
     }
 
-    public static Result success(Object data) {
+    public static Result success(String msg) {
         Result result = new Result();
         result.setSuccess(true);
-        result.setData(data);
+        result.setMsg(msg);
         return result;
     }
 

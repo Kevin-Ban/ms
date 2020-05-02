@@ -32,13 +32,17 @@ public class CacheManageController {
     @PostMapping("/refreshStock")
     public Result refreshStock() {
         cacheService.refreshStock();
-        return Result.success(MemoryCacheStock.getInstance());
+        Result result = Result.success();
+        result.setData(MemoryCacheStock.getInstance());
+        return result;
     }
 
     @ApiOperation("获取库存的缓存数据")
     @PostMapping("/listStock")
     public Result<List> listStock() {
         List<Stock> list = cacheService.listStock();
-        return Result.success(list);
+        Result result = Result.success();
+        result.setData(list);
+        return result;
     }
 }

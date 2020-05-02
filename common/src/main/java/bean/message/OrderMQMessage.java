@@ -1,4 +1,4 @@
-package com.stock.bean;
+package bean.message;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.rocketmq.common.message.Message;
@@ -7,16 +7,16 @@ import util.Global;
 
 import java.io.UnsupportedEncodingException;
 
-public class OrderMessage extends Message {
+public class OrderMQMessage extends Message {
 
-    public OrderMessage(byte[] body) {
+    public OrderMQMessage(byte[] body) {
         super();
         this.setTopic(Global.MQ_ORDER_TOPIC);
         this.setTags(Global.MQ_ORDER_TAG);
         this.setBody(body);
     }
 
-    public OrderMessage(Object data) throws UnsupportedEncodingException {
+    public OrderMQMessage(Object data) throws UnsupportedEncodingException {
         super();
         this.setTopic(Global.MQ_ORDER_TOPIC);
         this.setTags(Global.MQ_ORDER_TAG);
