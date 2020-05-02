@@ -25,7 +25,6 @@ spring:
         server-addr: 127.0.0.1:8848
         enabled: true
 
-
 rocketmq:
   topic: test
   tag: stock
@@ -40,3 +39,10 @@ rocketmq:
     namesrvAddr: ${rocketmq.producer.namesrvAddr}
     instanceName: ${rocketmq.producer.instanceName}
 
+
+mybatis:
+  mapper-locations: classpath:mapper/*mapper.xml
+
+# 订单过期时间，单位为分钟
+order:
+  expiredTime: 15

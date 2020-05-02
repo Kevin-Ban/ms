@@ -3,6 +3,8 @@ package bean.message;
 import bean.User;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class OrderMessage {
 
@@ -20,4 +22,9 @@ public class OrderMessage {
      * 商品库存编码
      */
     private String stockCode;
+
+    /**
+     * 商品价格
+     */
+    private BigDecimal price;
 }

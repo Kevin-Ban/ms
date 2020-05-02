@@ -1,5 +1,6 @@
 package com.stock.controller;
 
+import bean.User;
 import bean.message.OrderMQMessage;
 import bean.message.OrderMessage;
 import bean.result.Result;
@@ -16,9 +17,11 @@ import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import util.CurrentUserUtil;
 import util.Global;
 import util.SnowFlake;
 
@@ -38,6 +41,7 @@ public class StockController {
 
     @ApiOperation("减库存接口")
     @PostMapping("/ms/{code}")
+    @Transactional(rollbackFor = {Exception.class, RuntimeException.class})
     public Result ms(@PathVariable("code") String code) throws UnsupportedEncodingException, InterruptedException, RemotingException, MQClientException, MQBrokerException {
 
         // 如果内存地址中不包含code，则商品不存在或已下架
@@ -71,8 +75,11 @@ public class StockController {
         OrderMessage orderMessage = new OrderMessage();
         orderMessage.setOrderId(SnowFlake.nextId());
         orderMessage.setStockCode(code);
+        orderMessage.setPrice(stockInRedis.getPrice());
         // region 此处应该填入用户信息，或者至少应该填入token的信息，让检索用户的操作延后到订单服务
-        orderMessage.setUser(null);
+        User user = new User();
+        user.setUserId(CurrentUserUtil.getCurrentUserId());
+        orderMessage.setUser(user);
         // endregion
         // region 发送RocketMq消息
         OrderMQMessage orderMQMessage = new OrderMQMessage(orderMessage);
