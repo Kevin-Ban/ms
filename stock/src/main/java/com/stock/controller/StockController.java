@@ -5,6 +5,7 @@ import bean.message.OrderMQMessage;
 import bean.message.OrderMessage;
 import bean.result.Result;
 import bean.result.ResultMsg;
+import com.alibaba.fastjson.JSONObject;
 import com.stock.bean.Stock;
 import com.stock.service.MemoryCacheStock;
 import com.stock.service.StockService;
@@ -83,6 +84,7 @@ public class StockController {
         // endregion
         // region 发送RocketMq消息
         OrderMQMessage orderMQMessage = new OrderMQMessage(orderMessage);
+        log.info("发送的消息为：" + JSONObject.toJSONString(orderMQMessage));
         producer.send(orderMQMessage);
         // endregion
         return Result.success(ResultMsg.MS_SUCCESS);
