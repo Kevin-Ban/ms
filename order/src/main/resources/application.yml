@@ -43,6 +43,13 @@ rocketmq:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
 
+
 # 订单过期时间，单位为分钟
 order:
   expiredTime: 15
+
+# 日志的简单配置
+logging:
+  level:
+    root: info
+    com.order.mapper: debug

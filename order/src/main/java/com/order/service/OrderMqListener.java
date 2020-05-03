@@ -31,7 +31,7 @@ public class OrderMqListener implements MessageListenerConcurrently {
                 log.info("接收到的订单消息为：" + json);
                 OrderMessage orderMessage = JSONObject.parseObject(json, OrderMessage.class);
                 Order order = Order.fromOrderMq(orderMessage);
-                int result = orderMapper.replaceIntoOrder(order);
+                int result = orderMapper.duplicateUpdate(order);
                 if (result <= 0) {
                     return ConsumeConcurrentlyStatus.RECONSUME_LATER;
                 }
