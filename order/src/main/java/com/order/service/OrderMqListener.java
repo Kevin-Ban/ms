@@ -10,11 +10,13 @@ import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Slf4j
+@Service
 public class OrderMqListener implements MessageListenerConcurrently {
 
     @Autowired
@@ -22,6 +24,7 @@ public class OrderMqListener implements MessageListenerConcurrently {
 
     @Override
     public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
+
         for (MessageExt item : list) {
             try {
                 String json = new String(item.getBody(), StandardCharsets.UTF_8);

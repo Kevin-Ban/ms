@@ -1,6 +1,7 @@
 package com.order.mapper;
 
 import com.order.bean.Order;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -12,5 +13,8 @@ public interface OrderMapper {
      * @param param
      * @return
      */
+    @Insert("    replace INTO `order`\n" +
+            "    (`user_id`, `stock_code`, `pay_flag`, `purch_time`, `purch_price`, `expired_time`, `order_id`)\n" +
+            "    VALUES (#{userId}, #{stockCode}, #{payFlag}, #{purchTime}, #{purchPrice}, #{expiredTime}, #{orderId})")
     int replaceIntoOrder(Order param);
 }

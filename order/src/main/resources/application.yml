@@ -41,7 +41,7 @@ rocketmq:
 
 
 mybatis:
-  mapper-locations: classpath:mapper/*mapper.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
 
 # 订单过期时间，单位为分钟
 order:

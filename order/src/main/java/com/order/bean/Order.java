@@ -40,7 +40,9 @@ public class Order {
         order.setOrderId(orderMessage.getOrderId());
         order.setStockCode(orderMessage.getStockCode());
         LocalDateTime now = LocalDateTime.now();
+        Date purchTime = Date.from(now.atZone(ZoneId.systemDefault()).toInstant());
         now = now.plusMinutes(Optional.ofNullable(OrderUtil.expiredTime).orElse(15L));
+        order.setPurchTime(purchTime);
         Date expiredTime = Date.from(now.atZone(ZoneId.systemDefault()).toInstant());
         order.setExpiredTime(expiredTime);
         order.setPayFlag(0);

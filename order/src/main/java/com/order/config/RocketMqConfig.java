@@ -6,6 +6,7 @@ import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +31,9 @@ public class RocketMqConfig {
     @Value("${rocketmq.tag}")
     private String tag;
 
+    @Autowired
+    private OrderMqListener orderMqListener;
+
     @Bean
     public DefaultMQPushConsumer getRocketMQConsumer() throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(this.groupName);
@@ -47,10 +51,10 @@ public class RocketMqConfig {
         consumer.setMessageModel(MessageModel.CLUSTERING);
         try {
             consumer.subscribe(Global.MQ_ORDER_TOPIC, Global.MQ_ORDER_TAG);
-            consumer.registerMessageListener(new OrderMqListener());
+            consumer.registerMessageListener(orderMqListener);
             consumer.start();
-            log.info("已启动Consumer【group:" + this.groupName + "，instance:" + this.instanceName
-                    + "】，监听TOPIC-{" + this.topic + "},tag-{" + this.tag + "}");
+            log.info("已启动Consumer【group:" + consumer.getNamesrvAddr() + "，instance:" + consumer.getInstanceName()
+                    + "】，监听TOPIC-{" + Global.MQ_ORDER_TOPIC + "},tag-{" + Global.MQ_ORDER_TAG + "}");
         } catch (MQClientException e) {
             log.error("", e);
         }

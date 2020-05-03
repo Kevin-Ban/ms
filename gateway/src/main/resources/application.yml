@@ -15,6 +15,13 @@ spring:
           uri: lb://stock
           predicates:
             - Path=/stock/**
+          filters:
+            - StripPrefix=1
+            - name: RequestRateLimiter
+              args:
+                key-resolver: '#{@myKeyResolver}'
+                redis-rate-limiter.replenishRate: 10
+                redis-rate-limiter.burstCapacity: 20
         - id: order
           uri: lb://order
           predicates:
