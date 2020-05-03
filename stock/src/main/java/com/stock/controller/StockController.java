@@ -9,6 +9,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.stock.bean.Stock;
 import com.stock.service.MemoryCacheStock;
 import com.stock.service.StockService;
+import com.stock.util.CurrentUserUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +23,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import util.CurrentUserUtil;
 import util.Global;
 import util.SnowFlake;
 
