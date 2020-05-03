@@ -10,8 +10,8 @@ public class MyKeyResolver implements KeyResolver {
 
     @Override
     public Mono<String> resolve(ServerWebExchange exchange) {
-        log.info("hostName" + exchange.getRequest().getRemoteAddress().getHostName());
-        Mono<String> just = Mono.just(exchange.getRequest().getURI().getPath());
+//        log.info("拦截地址：" + exchange.getRequest().getRemoteAddress().getAddress().getHostAddress());
+        Mono<String> just = Mono.just(exchange.getRequest().getRemoteAddress().getAddress().getHostAddress());
         return just;
     }
 }
