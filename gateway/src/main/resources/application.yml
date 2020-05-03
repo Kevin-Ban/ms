@@ -25,8 +25,8 @@ spring:
             - name: RequestRateLimiter
               args:
                 key-resolver: '#{@myKeyResolver}'
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 2
+                redis-rate-limiter.replenishRate: 10
+                redis-rate-limiter.burstCapacity: 20
       # 开启网关转发，该设置生成后，之前配置的所有过滤器都将失效，当有个性化网关转发时，必须要禁用该设置
   #      discovery:
   #        locator:
