@@ -27,7 +27,7 @@ spring:
                 key-resolver: '#{@myKeyResolver}'
                 redis-rate-limiter.replenishRate: 1
                 redis-rate-limiter.burstCapacity: 2
-      # 开启网关转发，不设置该属性会转发失败，报404
+      # 开启网关转发，该设置生成后，之前配置的所有过滤器都将失效，当有个性化网关转发时，必须要禁用该设置
   #      discovery:
   #        locator:
   #          enabled: true
