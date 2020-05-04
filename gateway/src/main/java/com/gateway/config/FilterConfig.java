@@ -3,6 +3,7 @@ package com.gateway.config;
 import com.gateway.filter.LimitFilter;
 import com.gateway.filter.LoginFilter;
 import com.gateway.filter.MyKeyResolver;
+import com.gateway.filter.RedisLimitFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,5 +24,10 @@ public class FilterConfig {
     @Bean(name = "myKeyResolver")
     public MyKeyResolver myKeyResolver() {
         return new MyKeyResolver();
+    }
+
+    //    @Bean
+    public RedisLimitFilter redisLimitFilter() {
+        return new RedisLimitFilter();
     }
 }
