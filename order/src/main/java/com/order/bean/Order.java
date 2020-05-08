@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.order.util.OrderUtil;
 import lombok.Data;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -16,10 +18,13 @@ public class Order {
 
     private int id;
 
+    @NotNull
     private String userId;
 
     private String stockCode;
 
+    @Min(value = 0, message = "参数不能小于0")
+    @NotNull
     private int payFlag;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GTM+8")
